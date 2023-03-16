@@ -3,7 +3,7 @@ Repository of test tasks
 
 __Running phpMyAdmin in a container__
 
-Create a docker-compose file.yml with content
+Create a file docker-compose.yml with content
 ```
 services:
   mariadb:
