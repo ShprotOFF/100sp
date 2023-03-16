@@ -44,7 +44,7 @@ And upload the dump to the created database `mysql -u root -p test < /home/users
 
 __Backups__
 
-We do all the actions while in the container
+All actions are performed not in the container, but on the host
 
 create a backup directory `mkdir -p /path/to/backup`
 
@@ -57,3 +57,6 @@ docker exec -it container_name mysqldump -uroot --password=VerySecretPWD test > 
 echo "`date +"%Y-%m-%d_%H-%M-%S"` The test database has been unloaded\n" >> /path/to/backup/test.log
 /usr/bin/find /path/to/backup -type f -mtime +10 -exec rm -rf {} \;
 ```
+Making the file executable `chmod +x backup.sh`
+
+And create a task in the crown `crontab -e ``0 0 * * * /path/to/backup.sh`
