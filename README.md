@@ -26,3 +26,4 @@ services:
       - mariadb
 ```
 Then enter the command `docker-compose up -d`
+You can view the list of running containers with the `docker ps` command
