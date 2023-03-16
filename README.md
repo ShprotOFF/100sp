@@ -25,3 +25,4 @@ services:
     depends_on:
       - mariadb
 ```
+Then enter the command `docker-compose up -d`
