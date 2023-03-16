@@ -57,6 +57,8 @@ docker exec -it container_name mysqldump -uroot --password=VerySecretPWD test > 
 echo "`date +"%Y-%m-%d_%H-%M-%S"` The test database has been unloaded\n" >> /path/to/backup/test.log
 /usr/bin/find /path/to/backup -type f -mtime +10 -exec rm -rf {} \;
 ```
+A database dump will be created every night and its relevance will be the last 10 days
+
 Making the file executable `chmod +x backup.sh`
 
 And create a task in the crown `crontab -e ` `0 0 * * * /path/to/backup.sh`
