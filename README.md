@@ -32,3 +32,8 @@ You can view the list of running containers with the `docker ps` command
 We transfer the dump file to the host with the container `scp /path/to/dump.sql username@ip_address:/path/dump.sql`
 
 Then we transfer the dump to the container `docker cp dump.sql container_name:/home`
+
+We enter the DBMS management console of the container `docker exec -it swapon-mariadb-1 mysql -uroot -p
+VerySecretPWD`
+
+Create a database and exit `CREATE DATABASE test;` `exit`
