@@ -33,14 +33,14 @@ We transfer the dump file to the host with the container `scp /path/to/dump.sql 
 
 Then we transfer the dump to the container `docker cp dump.sql container_name:/home`
 
-We enter the DBMS management console of the container `docker exec -it swapon-mariadb-1 mysql -uroot -p
+We enter the DBMS management console of the container `docker exec -it container_name mysql -uroot -p
 VerySecretPWD`
 
 Create a database and exit `CREATE DATABASE test;` `exit`
 
 We go into the container `docker exec -it container_name bash`
 
-And upload the dump to the created database `mysql -u root -p test < /home/users.sql` `VerySecretPWD`
+And upload the dump to the created database `mysql -u root -p test < /home/dump.sql` `VerySecretPWD`
 
 __Backups__
 
