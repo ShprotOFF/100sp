@@ -28,3 +28,5 @@ services:
 Then enter the command `docker-compose up -d`
 
 You can view the list of running containers with the `docker ps` command
+
+We transfer the dump file to the host with the container `scp /path/to/dump.sql username@ip_address:/path/dump.sql`
