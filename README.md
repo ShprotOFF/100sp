@@ -59,4 +59,4 @@ echo "`date +"%Y-%m-%d_%H-%M-%S"` The test database has been unloaded\n" >> /pat
 ```
 Making the file executable `chmod +x backup.sh`
 
-And create a task in the crown `crontab -e ``0 0 * * * /path/to/backup.sh`
+And create a task in the crown `crontab -e ` `0 0 * * * /path/to/backup.sh`
