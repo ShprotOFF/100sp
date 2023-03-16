@@ -37,3 +37,8 @@ We enter the DBMS management console of the container `docker exec -it swapon-ma
 VerySecretPWD`
 
 Create a database and exit `CREATE DATABASE test;` `exit`
+
+We go into the container `docker exec -it container_name bash`
+
+And upload the dump to the created database `mysql -u root -p test < /home/users.sql` `VerySecretPWD`
+
